@@ -1,4 +1,5 @@
-CONTAINER_TAG := "dxjoke/tectonic-docker:0.8.0-bullseye-biber"
+CONTAINER_TAG := "dxjoke/tectonic-docker:0.9.0-bullseye-biber"
+# CONTAINER_TAG := "dxjoke/tectonic-docker:0.9.0-alpine-biber"
 
 in_user:
 	docker run --rm --volume "$(pwd)":/data --user "$(id -u):$(id -g)" --workdir="/data" -t {{CONTAINER_TAG}} tectonic main.tex
